@@ -27,17 +27,16 @@ i would say that the worst case would take:
 6.6666 secconds
 
 reasoning: i set it up like ratio and solved for the missing variable. I assumed that-
-the scaling holdes and that there are no other variables affecting the runtime. and ig that it was the worst case i was calculating.
+the scaling holdes and that there are no other variables affecting the runtime, ANd ig that it was the worst case i was calculating.
+I am assuming the complexity of the function to be the same as a properly balanced search tree where we cut the search space in half at each node.
 
 - You measure the time with 10,000 elements and it takes 100 seconds! List 3
   reasons why this could be the case, given that reasoning with the asymptotic
   complexity suggests a different time.
 
-1. asymptotic complexity does not measure external circumstances such as the computer does not "efficently",
-work with numbers above a certain size, so if all were doing is adding expoentially larger numbers while addition at small input size has hardware-
-accelarators we may have to fall back to a software solution at larger inputs. the specifics were just an example of my thought process but i think you get what im thinking.-
-This does effect small inputs that that is my point, maby 1,000 elements was enough to fit inside the (enter example number here) bit addition curcitry, but the 10,000 didnt-
-so now we have to fall back to the software solution to compute the result.
+1. Because it is a binary search tree, it is possible that it is not balanced. it is possible that it looks more like a linked list and that would
+make it more clear as to why it ran so slowly. Instead of chopping our search space in half each time in the worst case we could just be going down
+the linked list.
 
 2. What if we ran out of cashe or even worse we ran out of ram entirly-
 and had to use the swap file, this could lead to horrible run times. Again this would have an effect-
