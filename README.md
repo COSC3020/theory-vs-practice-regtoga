@@ -36,7 +36,7 @@ I am assuming the complexity of the function to be the same as a properly balanc
 
 1. Because it is a binary search tree, it is possible that it is not balanced. it is possible that it looks more like a linked list and that would
 make it more clear as to why it ran so slowly. Instead of chopping our search space in half each time in the worst case we could just be going down
-the linked list.
+the linked list. in this worst case it would be a runtime of linear O(n)
 
 2. What if we ran out of cashe or even worse we ran out of ram entirly-
 and had to use the swap file, this could lead to horrible run times. Again this would have an effect-
