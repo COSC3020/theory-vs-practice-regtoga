@@ -34,9 +34,16 @@ I am assuming the complexity of the function to be the same as a properly balanc
   reasons why this could be the case, given that reasoning with the asymptotic
   complexity suggests a different time.
 
-1. Because it is a binary search tree, it is possible that it is not balanced. it is possible that it looks more like a linked list and that would
-make it more clear as to why it ran so slowly. Instead of chopping our search space in half each time in the worst case we could just be going down
-the linked list. in this worst case it would be a runtime of linear O(n) in the usual case it would be O(log(n)). Because here i am assuming the runtime is O(n) That would mean that to get a runtime of 100 seconds we were processing 100 elements a second, while the smaller input size was doing 200 elements a second. That difference in time and elements doesnt seam to line up to me, my conclusion here is that neither the smaller input or the larger input are balanced binary search trees but they arent the worst either, there somewhere in the middle.
+1. reason: binary search trees arnt alwasy balanced. What i was trying to say was that
+trees have a best case of log(n) and a worst case of n. The realworld runtime for a real 
+data set is likely inbetween these two bounds if the dataset is not structured properly. in this case sorted.
+
+in my last responce i tried to talk about how the small input of 1,000 was shifting though around 200 elements
+a second, while the 10,000 was only doing 100. This means to me that the small input was not properly balanced
+because it should have been 500 elements the first second, 250 the 2nd, 125, the third second and so on. The bigger 
+input however is the real issue, because i would have expected it to be 5,000 elements disregarded during the first 
+second, 2,500 in the second, and 1,250 the third... but we only saw an average of 100... thats really bad.
+So my point is that the 2nd input is a REALLY bad tree while the first one is only a pretty bad tree.
 
 2. What if we ran out of cashe or even worse we ran out of ram entirly-
 and had to use the swap file, this could lead to horrible run times. Again this would have an effect-
