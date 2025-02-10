@@ -36,7 +36,7 @@ I am assuming the complexity of the function to be the same as a properly balanc
 
 1. reason: binary search trees arnt alwasy balanced. What i was trying to say was that
 trees have a best case of log(n) and a worst case of n. The realworld runtime for a real 
-data set is likely inbetween these two bounds if the dataset is not structured properly. in this case sorted.
+data set is likely inbetween these two bounds if the dataset is not structured properly.
 
 in my last responce i tried to talk about how the small input of 1,000 was shifting though around 200 elements
 a second, while the 10,000 was only doing 100. This means to me that the small input was not properly balanced
@@ -44,6 +44,8 @@ because it should have been 500 elements the first second, 250 the 2nd, 125, the
 input however is the real issue, because i would have expected it to be 5,000 elements disregarded during the first 
 second, 2,500 in the second, and 1,250 the third... but we only saw an average of 100... thats really bad.
 So my point is that the 2nd input is a REALLY bad tree while the first one is only a pretty bad tree.
+
+well, im pretty shure you cant, i just made it up with no real foundation to go off of. Would it help if i erased it? aslong as you understood the part after the (1.) you got my point?
 
 2. What if we ran out of cashe or even worse we ran out of ram entirly-
 and had to use the swap file, this could lead to horrible run times. Again this would have an effect-
