@@ -34,11 +34,13 @@ I am assuming the complexity of the function to be the same as a properly balanc
   reasons why this could be the case, given that reasoning with the asymptotic
   complexity suggests a different time.
 
-1. reason: binary search trees arnt alwasy balanced. What i was trying to say was that
-trees have a best case of log(n) and a worst case of n. The realworld runtime for a real 
-data set is likely inbetween these two bounds if the dataset is not structured properly.
-This likely isnt the whole story for why the larger input took so long,
-but that slack is what the other two reasons make up for.
+1. If the binary search tree is unbalanced, it would look something close to a linked list. In the worst case, searching takes O(n) time instead of O(logn).
+Instead of a minor increase in runtime, the time complexity jumps dramatically, making search with 10,000 elements much slower than with 1,000 elements.
+![alt text](image-2.png)
+Here im just looking at the worst case cenario where the small input takes logn time, it finished in roughtly 10 units of time.
+On the other hand the larger input (10x smaller input) under the worst case senario took 10000 time units, this is 100x worse than the smaller result.
+using this logic 100 times worse than 5 seconds ='s 500 seconds... using this logic it is indeed easily possible for the bst (binary search tree),
+to be unbalanced enough to equate out to 100 seconds.
 
 2. What if we ran out of cashe or even worse we ran out of ram entirly-
 and had to use the swap file, this could lead to horrible run times. Again this would have an effect-
